@@ -4,25 +4,25 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                bat 'mvn clean'
+                bat 'C:\\Users\\harsh\\apache-maven-3.9.16\\bin\\mvn.cmd clean'
             }
         }
 
         stage('Install') {
             steps {
-                bat 'mvn install -DskipTests'
+                bat 'C:\\Users\\harsh\\apache-maven-3.9.16\\bin\\mvn.cmd install -DskipTests'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                bat 'C:\\Users\\harsh\\apache-maven-3.9.16\\bin\\mvn.cmd test'
             }
         }
 
         stage('Package') {
             steps {
-                bat 'mvn package -DskipTests'
+                bat 'C:\\Users\\harsh\\apache-maven-3.9.16\\bin\\mvn.cmd package -DskipTests'
             }
         }
     }
